@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omnicom · Open Source</title>
+<meta name="description" content="Omnicom, s.r.o. builds tooling for the ITSM/ESM ecosystem — including the GLPI MCP Server plugin that connects GLPI to AI assistants.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 105 70'%3E%3Crect width='105' height='70' fill='%23000000'/%3E%3Ccircle cx='40' cy='35' r='23' fill='none' stroke='%23c61f40' stroke-width='15'/%3E%3Cpath d='M88.1,42.8 A23,23 0 1,1 88.1,27.2' fill='none' stroke='%23c61f40' stroke-width='15'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#top">
+      <svg class="brand-mark" width="34" height="23" viewBox="0 0 105 70" aria-hidden="true">
+        <circle cx="40" cy="35" r="23" fill="none" stroke="currentColor" stroke-width="15"/>
+        <path d="M88.1,42.8 A23,23 0 1,1 88.1,27.2" fill="none" stroke="currentColor" stroke-width="15"/>
+      </svg>
+      <span class="brand-name">OMNICOM</span>
+    </a>
+    <nav class="site-nav">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a class="btn-ghost" href="https://github.com/OMNICOM-Digital" target="_blank" rel="noopener">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span>GitHub</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">Omnicom, s.r.o. — Bratislava, Slovakia</p>
+      <h1>We build the tools behind<br>IT Service Management.</h1>
+      <p class="lede">
+        Omnicom is an ITSM/ESM consultancy — we deploy and customize platforms like GLPI, Xurrent
+        and HaloITSM for clients across government and enterprise. This is where we open-source
+        the tooling we build along the way.
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#projects">See our projects</a>
+        <a class="btn-ghost" href="https://www.omnicom.digital" target="_blank" rel="noopener">omnicom.digital ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="wrap">
+      <h2 class="section-title">Projects</h2>
+      <p class="section-lede">Open-source tooling built for the GLPI ecosystem, released as we ship it.</p>
+
+      <div class="project-card featured">
+        <div class="project-card-head">
+          <h3>GLPI MCP Server Plugin</h3>
+          <span class="status status-progress">In development</span>
+        </div>
+        <p class="project-desc">
+          A GLPI plugin that exposes GLPI as an <strong>MCP (Model Context Protocol) server</strong>,
+          so AI assistants — Microsoft Copilot, Claude, and others — can work directly with tickets,
+          the knowledge base, users and groups, and the service catalog through a standard tool
+          interface, instead of one-off custom integrations per client.
+        </p>
+
+        <div class="project-detail-grid">
+          <div>
+            <h4>Two permission tiers</h4>
+            <p>Tool visibility follows existing GLPI profiles:</p>
+            <ul>
+              <li><strong>Standard / Central</strong> — full toolset, including user &amp; group management, ticket updates, assignment and validation</li>
+              <li><strong>Self-Service / Helpdesk</strong> — a limited subset: own tickets, FAQ, and permitted forms only</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Tool registry covers</h4>
+            <ul>
+              <li>Ticket listing, search, detail, timeline, creation, updates</li>
+              <li>Followups, tasks, solutions, assignment, linking, validation approval</li>
+              <li>Document upload (base64 or by URL)</li>
+              <li>User &amp; group management</li>
+              <li>Knowledge base browse, search, and CRUD</li>
+              <li>GLPI Forms (service catalog) — schema retrieval and submission</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-tags">
+          <span class="tag">PHP</span>
+          <span class="tag">GLPI Plugin</span>
+          <span class="tag">MCP</span>
+          <span class="tag">AI Integration</span>
+        </div>
+
+        <p class="project-note">
+          Planned for release to Omnicom's GLPI clients. Repository link goes live here once it's public —
+          <a href="https://github.com/OMNICOM-Digital" target="_blank" rel="noopener">follow the org on GitHub</a>
+          to get notified.
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <div class="project-card">
+          <div class="project-card-head">
+            <h3>GLPI Notification Templates</h3>
+            <span class="status status-internal">Internal tooling</span>
+          </div>
+          <p class="project-desc">
+            A branded, reusable HTML notification template for GLPI ticket events (new ticket, close,
+            followup) built with GLPI's tag system — one master template driving consistent client-facing
+            emails across the Omnicom ServiceDesk.
+          </p>
+          <div class="project-tags">
+            <span class="tag">GLPI</span>
+            <span class="tag">Notifications</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-head">
+            <h3>Service Catalog Icon Sets</h3>
+            <span class="status status-internal">Internal tooling</span>
+          </div>
+          <p class="project-desc">
+            Hand-built SVG hero artwork and service catalog icon sets used to brand GLPI self-service
+            portals for clients — designed to match each client's palette while staying easy to theme.
+          </p>
+          <div class="project-tags">
+            <span class="tag">SVG</span>
+            <span class="tag">Design</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-card-head">
+            <h3>GLPI Backup &amp; Ops Scripts</h3>
+            <span class="status status-internal">Internal tooling</span>
+          </div>
+          <p class="project-desc">
+            Operational scripts for production GLPI environments — consistent, transaction-safe backups
+            and day-to-day maintenance tasks across multi-entity instances.
+          </p>
+          <div class="project-tags">
+            <span class="tag">Linux</span>
+            <span class="tag">MySQL</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section section-alt">
+    <div class="wrap about-grid">
+      <div>
+        <h2 class="section-title">About Omnicom</h2>
+        <p>
+          Omnicom, s.r.o. is an IT Service Management and Enterprise Service Management consultancy
+          based in Bratislava, Slovakia. We help organizations — including government and enterprise
+          clients — design, implement and run their service management practice, from advisory through
+          hands-on tool configuration.
+        </p>
+        <p>
+          We work across the ITSM/ESM tool landscape, with particular depth in <strong>GLPI</strong>,
+          alongside Ausemio, HaloITSM, Lansweeper and Xurrent. Alongside client delivery, we build and
+          open-source the tooling that makes that work repeatable — starting with the GLPI MCP Server
+          plugin.
+        </p>
+      </div>
+      <div class="stack-card">
+        <h4>Where we work</h4>
+        <ul class="stack-list">
+          <li>GLPI 10 &amp; 11</li>
+          <li>Xurrent iPaaS</li>
+          <li>ITIL &amp; ISO 20000 practice</li>
+          <li>Linux server administration</li>
+          <li>Model Context Protocol (MCP)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="wrap contact-inner">
+      <h2 class="section-title">Get in touch</h2>
+      <p class="section-lede">
+        Using GLPI and curious about the MCP server plugin, or want to talk ITSM tooling?
+      </p>
+      <div class="hero-actions">
+        <a class="btn-primary" href="https://www.omnicom.digital" target="_blank" rel="noopener">Visit omnicom.digital ↗</a>
+        <a class="btn-ghost" href="https://github.com/OMNICOM-Digital" target="_blank" rel="noopener">github.com/OMNICOM-Digital ↗</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <svg class="brand-mark" width="26" height="17" viewBox="0 0 105 70" aria-hidden="true">
+        <circle cx="40" cy="35" r="23" fill="none" stroke="currentColor" stroke-width="15"/>
+        <path d="M88.1,42.8 A23,23 0 1,1 88.1,27.2" fill="none" stroke="currentColor" stroke-width="15"/>
+      </svg>
+      <div>
+        <strong>OMNICOM, s.r.o.</strong>
+        <span>Lakeside park, Tomášikova 64 · 831 04 Bratislava, Slovak Republic</span>
+      </div>
+    </div>
+    <div class="footer-meta">
+      <span>© <span id="year"></span> Omnicom, s.r.o.</span>
+      <a href="https://www.omnicom.digital" target="_blank" rel="noopener">omnicom.digital</a>
+    </div>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
