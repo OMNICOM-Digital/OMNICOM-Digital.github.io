@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>OMNICOM · Open Source</title>
-<meta name="description" content="OMNICOM builds tooling for the ITSM/ESM ecosystem, including the GLPI MCP Server plugin that connects GLPI to AI assistants.">
+<meta name="description" content="OMNICOM builds tooling for the ITSM/ESM ecosystem, including the GLPI MCP Server plugin that connects GLPI to AI assistants and its free, read-only edition, MCP Server Lite.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 105 70'%3E%3Crect width='105' height='70' fill='%23000000'/%3E%3Ccircle cx='40' cy='35' r='23' fill='none' stroke='%23c61f40' stroke-width='15'/%3E%3Cpath d='M88.1,42.8 A23,23 0 1,1 88.1,27.2' fill='none' stroke='%23c61f40' stroke-width='15'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -38,10 +38,10 @@
 
   <section class="hero">
     <div class="wrap hero-inner">
-      <p class="eyebrow">Omnicom, s.r.o. · ITSM/ESM Consultancy</p>
+      <p class="eyebrow">OMNICOM s.r.o. · ITSM/ESM Consultancy</p>
       <h1>We build the tools behind<br>IT Service Management.</h1>
       <p class="lede">
-        Omnicom is an ITSM/ESM consultancy. We deploy and customize platforms like GLPI, Xurrent
+        OMNICOM is an ITSM/ESM consultancy. We deploy and customize platforms like GLPI, Xurrent
         and HaloITSM for clients across government and enterprise. This is where we open-source
         the tooling we build along the way.
       </p>
@@ -106,6 +106,7 @@
               <li>All 17 findings from an independent external security review remediated (1.3.0)</li>
               <li>Broad-impact write tools ship disabled until an admin enables them</li>
               <li>Approved writes are bound to a signed, short-lived token for the exact previewed data</li>
+              <li>Every release gets security fixes for five years from its <a href="https://github.com/OMNICOM-Digital/mcpserver/releases" target="_blank" rel="noopener">GitHub Release</a> date, free for everyone (1.8.0: until 29 Oct 2031)</li>
             </ul>
           </div>
         </div>
@@ -119,9 +120,59 @@
         </div>
 
         <p class="project-note">
-          Available to Omnicom's GLPI clients under an annual subscription.
+          Available to OMNICOM's GLPI clients under an annual subscription.
           <a href="https://github.com/OMNICOM-Digital/mcpserver" target="_blank" rel="noopener">View the repository</a>
           or <a href="https://www.omnicom.digital/en/our-services/methodologies-and-tools/glpi/plugins-for-glpi/" target="_blank" rel="noopener">get it at omnicom.digital</a>.
+          Only need read access? See <a href="#mcp-lite">MCP Server Lite</a> below.
+        </p>
+      </div>
+
+      <div class="project-card lite" id="mcp-lite">
+        <div class="project-card-head">
+          <h3>MCP Server Lite for GLPI</h3>
+          <span class="status status-free">v1.1.0 · Free</span>
+        </div>
+        <p class="project-desc">
+          The <strong>free, read-only edition</strong> of the GLPI MCP Server plugin. It exposes GLPI as an
+          MCP server so AI assistants can look up tickets, the knowledge base, projects, users and the
+          service catalog conversationally, without being able to change anything. 33 read-only tools,
+          open source under GPLv3, free for everyone.
+        </p>
+
+        <div class="project-detail-grid">
+          <div>
+            <h4>What it does</h4>
+            <ul>
+              <li><strong>Read-only by construction</strong>: no code that creates, updates or deletes GLPI data, no database tables, no admin page</li>
+              <li><strong>33 read tools</strong>: tickets and ITIL categories (15), knowledge base (4), service catalog forms (2), projects (7), users, groups, entities and session (5)</li>
+              <li><strong>Ticket review helpers</strong>: gather what is needed to review a ticket's type or category; advisory only, changes stay in GLPI</li>
+            </ul>
+          </div>
+          <div>
+            <h4>Access and compatibility</h4>
+            <ul>
+              <li><strong>Each user's own rights</strong>: everyone signs in to GLPI through OAuth, and every call runs as that GLPI user</li>
+              <li>Self-Service profiles see only the tools that fit them</li>
+              <li>Runs alongside the full plugin on the same GLPI (own plugin key and endpoint)</li>
+              <li>GLPI 11.0.11 to 11.9, on-premise, PHP 8.1+</li>
+              <li>Security fixes until at least 2 Nov 2031</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="project-tags">
+          <span class="tag">PHP</span>
+          <span class="tag">GLPI Plugin</span>
+          <span class="tag">MCP</span>
+          <span class="tag">Read-only</span>
+          <span class="tag">GPLv3</span>
+        </div>
+
+        <p class="project-note">
+          Free download with SHA-256 checksums.
+          <a href="https://github.com/OMNICOM-Digital/mcpserver-lite/releases/latest" target="_blank" rel="noopener">Download the latest release</a>
+          or <a href="https://github.com/OMNICOM-Digital/mcpserver-lite" target="_blank" rel="noopener">view the source</a>.
+          No support SLA; for write tools and support, see the full plugin above.
         </p>
       </div>
 
@@ -134,7 +185,7 @@
           <p class="project-desc">
             A branded, reusable HTML notification template for GLPI ticket events (new ticket, close,
             followup) built with GLPI's tag system, using one master template to drive consistent client-facing
-            emails across the Omnicom ServiceDesk.
+            emails across the OMNICOM ServiceDesk.
           </p>
           <div class="project-tags">
             <span class="tag">GLPI</span>
@@ -178,9 +229,9 @@
   <section id="about" class="section section-alt">
     <div class="wrap about-grid">
       <div>
-        <h2 class="section-title">About Omnicom</h2>
+        <h2 class="section-title">About OMNICOM</h2>
         <p>
-          Omnicom, s.r.o. is an IT Service Management and Enterprise Service Management consultancy.
+          OMNICOM s.r.o. is an IT Service Management and Enterprise Service Management consultancy.
           We help organizations, including government and enterprise
           clients, design, implement and run their service management practice, from advisory through
           hands-on tool configuration.
@@ -189,7 +240,7 @@
           We work across the ITSM/ESM tool landscape, with particular depth in <strong>GLPI</strong>,
           alongside Ausemio, HaloITSM, Lansweeper and Xurrent. Alongside client delivery, we build and
           open-source the tooling that makes that work repeatable, starting with the GLPI MCP Server
-          plugin.
+          plugin and its free, read-only edition, MCP Server Lite.
         </p>
       </div>
       <div class="stack-card">
@@ -209,7 +260,9 @@
     <div class="wrap contact-inner">
       <h2 class="section-title">Get in touch</h2>
       <p class="section-lede">
-        Using GLPI and curious about the MCP server plugin, or want to talk ITSM tooling?
+        Using GLPI and curious about the MCP Server plugin, or want to talk ITSM tooling?
+        Write to <a class="inline-link" href="mailto:sales@omnicom.digital">sales@omnicom.digital</a>.
+        Security reports go to <a class="inline-link" href="mailto:security@omnicom.digital">security@omnicom.digital</a>.
       </p>
       <div class="hero-actions">
         <a class="btn-primary" href="https://www.omnicom.digital" target="_blank" rel="noopener">Visit omnicom.digital ↗</a>
@@ -228,12 +281,12 @@
         <path d="M88.1,42.8 A23,23 0 1,1 88.1,27.2" fill="none" stroke="currentColor" stroke-width="15"/>
       </svg>
       <div>
-        <strong>OMNICOM, s.r.o.</strong>
+        <strong>OMNICOM s.r.o.</strong>
         <span>Lakeside park, Tomášikova 64 · 831 04 Bratislava, Slovak Republic</span>
       </div>
     </div>
     <div class="footer-meta">
-      <span>© <span id="year"></span> Omnicom, s.r.o.</span>
+      <span>© <span id="year"></span> OMNICOM s.r.o.</span>
       <a href="https://www.omnicom.digital" target="_blank" rel="noopener">omnicom.digital</a>
     </div>
   </div>
