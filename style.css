@@ -155,6 +155,8 @@ h1, h2, h3, h4 { font-weight: 700; margin: 0 0 .5em; letter-spacing: -0.01em; }
 }
 
 .project-card.featured { border-color: rgba(198, 31, 64, 0.4); }
+.project-card.lite { border-color: rgba(19, 166, 136, 0.35); scroll-margin-top: 84px; }
+.project-detail-grid a { color: var(--red-light); text-decoration: underline; text-underline-offset: 2px; }
 
 .project-card-head {
   display: flex;
@@ -178,6 +180,7 @@ h1, h2, h3, h4 { font-weight: 700; margin: 0 0 .5em; letter-spacing: -0.01em; }
 }
 
 .status-progress { background: rgba(198, 31, 64, 0.18); color: var(--red-light); border: 1px solid rgba(198, 31, 64, 0.35); }
+.status-free { background: rgba(19, 166, 136, 0.16); color: #4fd1b3; border: 1px solid rgba(19, 166, 136, 0.4); }
 .status-internal { background: rgba(255,255,255,0.06); color: var(--text-dim); border: 1px solid var(--border-soft); }
 
 .project-desc { color: var(--text-dim); margin: 0 0 8px; }
@@ -262,6 +265,7 @@ h1, h2, h3, h4 { font-weight: 700; margin: 0 0 .5em; letter-spacing: -0.01em; }
 .contact-inner { text-align: center; }
 .contact-inner .section-lede { margin-left: auto; margin-right: auto; }
 .contact-inner .hero-actions { justify-content: center; }
+.inline-link { color: var(--red-light); text-decoration: underline; text-underline-offset: 2px; }
 
 /* Footer */
 .site-footer { border-top: 1px solid var(--border-soft); padding: 32px 0; }
